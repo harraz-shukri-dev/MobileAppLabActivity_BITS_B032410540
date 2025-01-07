@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Login Item -->
+    <item
+        android:id="@+id/nav_login"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Login"
+        android:enabled="true"
+        android:visible="true" />
+
+    <!-- Register Item -->
+    <item
+        android:id="@+id/nav_register"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Register"
+        android:enabled="true"
+        android:visible="true" />
+
+    <!-- Expenses Item -->
+    <item
+        android:id="@+id/nav_expenses"
+        android:icon="@drawable/baseline_add_card_24"
+        android:title="Expenses"
+        android:enabled="true"
+        android:visible="true" />
+
+    <!-- Student Item -->
+    <item
+        android:id="@+id/nav_student"
+        android:icon="@drawable/baseline_people_24"
+        android:title="Student"
+        android:enabled="true"
+        android:visible="true" />
+
+    <!-- Get Image Item -->
+    <item
+        android:id="@+id/nav_getImage"
+        android:icon="@drawable/sharp_add_a_photo_24"
+        android:title="Get Image"
+        android:enabled="true"
+        android:visible="true" />
+
+    <!-- Search Student -->
+    <item
+        android:id="@+id/nav_searchStudent"
+        android:icon="@drawable/outline_category_search_24"
+        android:title="Search Student"
+        android:enabled="true"
+        android:visible="true" />
+
+</menu>

@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">MyLabApplication</string>
+    <string name="welcome_text">Welcome !</string>
+    <string name="user_name">Enter your username</string>
+    <string name="user_pwd">Your Password</string>
+    <string name="btn_login">Sign In</string>
+    <string name="name">Enter your Name</string>
+    <string name="email">Email Address</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="btn_Register">Sign Up</string>
+
+    <!-- Expenses -->
+    <string name="lblExpFor">Expense for…</string>
+    <string name="lblExpDate">Date</string>
+    <string name="lblExpValue">RM</string>
+    <string name="lblSpnQty">Select Quantity</string>
+    <string name="lblTotPrice">Total price RM:</string>
+    <string name="btnSave">Save Expenses</string>
+    <string name="imageExpenses">imageExpenses</string>
+    <string name="pageNameExp">Calculate your Expenses!</string>
+
+    <!-- Nav -->
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="state_origin">State Origin:</string>
+    <string name="stud_full_name">Your full name</string>
+    <string name="student_number">Your Student Number</string>
+    <string name="stud_email">your_email@utem.edu.my</string>
+    <string name="stud_bod">Your birthdate</string>
+    <string name="your_gender_cd">Your Gender</string>
+    <string name="addFloatButtonStudent">AddFloatButtonStudent</string>
+    <string name="student_registration_form">Student Registration Form</string>
+
+    <!-- Student -->
+    <string-array name="state_arrays">
+        <item>Melaka</item>
+        <item>Selangor</item>
+        <item>Johor</item>
+        <item>Negeri Sembilan</item>
+        <item>Pahang</item>
+        <item>Terengganu</item>
+        <item>Kedah</item>
+        <item>Perlis</item>
+    </string-array>
+
+    <!-- Get Image -->
+    <string name="get_your_image">Get Your Image</string>
+    <string name="no_network_message">No Network! Please add data plan or connect to a Wi-Fi network!</string>
+    <string name="image_load_error">Failed to load the image. Please try again later.</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="title_activity_get_joke_university">getJokeUniversity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+
+
+</resources>
