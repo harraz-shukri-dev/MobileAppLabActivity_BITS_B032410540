@@ -53,4 +53,9 @@ dependencies {
 
     implementation (libs.volley)
 
+    implementation (libs.room.common)
+    implementation (libs.room.runtime)
+    annotationProcessor (libs.room.compiler)
+
+
 }

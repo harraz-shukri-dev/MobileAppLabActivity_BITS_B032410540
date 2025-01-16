@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyLabApplication</string>
+    <string name="app_name">Student Expense</string>
     <string name="welcome_text">Welcome !</string>
     <string name="user_name">Enter your username</string>
     <string name="user_pwd">Your Password</string>
@@ -13,7 +13,7 @@
     <string name="female">Female</string>
     <string name="btn_Register">Sign Up</string>
 
-    <!-- Expenses -->
+    <!-- ActivityExpense -->
     <string name="lblExpFor">Expense for…</string>
     <string name="lblExpDate">Date</string>
     <string name="lblExpValue">RM</string>
@@ -32,7 +32,7 @@
     <string name="stud_email">your_email@utem.edu.my</string>
     <string name="stud_bod">Your birthdate</string>
     <string name="your_gender_cd">Your Gender</string>
-    <string name="addFloatButtonStudent">AddFloatButtonStudent</string>
+    <string name="addFloatButtonStudent">Add Student</string>
     <string name="student_registration_form">Student Registration Form</string>
 
     <!-- Student -->
@@ -47,6 +47,22 @@
         <item>Perlis</item>
     </string-array>
 
+
+    <string name="full_name2">Full Name</string>
+    <string name="student_number2">Student Number</string>
+    <string name="email2">Email</string>
+    <string name="gender2">Gender</string>
+    <string name="birthdate2">Birthdate</string>
+    <string name="state2">State</string>
+
+
+    <string name="expense_name">Expense Name</string>
+    <string name="expense_date">Date</string>
+    <string name="expense_value">Value</string>
+    <string name="expense_quantity">Quantity</string>
+    <string name="expense_total">Total</string>
+
+
     <!-- Get Image -->
     <string name="get_your_image">Get Your Image</string>
     <string name="no_network_message">No Network! Please add data plan or connect to a Wi-Fi network!</string>
@@ -55,6 +71,13 @@
     <string name="title_activity_get_joke_university">getJokeUniversity</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+    <string name="your_image_placeholder">Your Image Here</string>
+    <string name="student_card">Student</string>
+    <string name="search_student_card">Search Student</string>
+    <string name="expenses_card">Expenses</string>
+    <string name="get_image_card">Get Image</string>
+    <string name="dashboard_title">Welcome to Student Expenses App</string>
+    <string name="dashboard_subtitle">Be a Smart Student, Plan Your Expenses</string>
 
 
 </resources>

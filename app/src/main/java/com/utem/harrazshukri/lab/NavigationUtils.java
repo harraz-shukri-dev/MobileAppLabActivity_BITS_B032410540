@@ -19,7 +19,7 @@ public class NavigationUtils {
             } else if (item.getItemId() == R.id.nav_register) {
                 intent = new Intent(context, Register.class);
             } else if (item.getItemId() == R.id.nav_expenses) {
-                intent = new Intent(context, Expenses.class);
+                intent = new Intent(context, ActivityExpense.class);
             } else if (item.getItemId() == R.id.nav_student) {
                 intent = new Intent(context, StudentForm.class);
             } else if (item.getItemId() == R.id.nav_getImage) {
@@ -27,6 +27,9 @@ public class NavigationUtils {
             }
             else if (item.getItemId() == R.id.nav_searchStudent) {
                 intent = new Intent(context, SearchStudentActivity.class);
+            }
+            else if (item.getItemId() == R.id.nav_dashboard) {
+                intent = new Intent(context, ActivityDashBoard.class);
             }
 
             if (intent != null) {

@@ -3,48 +3,67 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="?attr/colorSurface">
 
+    <!-- Full Name -->
     <TextView
         android:id="@+id/lblFullName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Full Name"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+        android:text="@string/full_name2"
+        android:textAppearance="?attr/textAppearanceBodyLarge"
+        android:textColor="?attr/colorOnSurface"
+        android:paddingVertical="8dp" />
 
+    <!-- Student Number -->
     <TextView
         android:id="@+id/lblStudNo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Student Number"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+        android:text="@string/student_number2"
+        android:textAppearance="?attr/textAppearanceBodyLarge"
+        android:textColor="?attr/colorOnSurface"
+        android:paddingVertical="8dp" />
 
+    <!-- Email -->
     <TextView
         android:id="@+id/lblEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Email"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+        android:text="@string/email2"
+        android:textAppearance="?attr/textAppearanceBodyLarge"
+        android:textColor="?attr/colorOnSurface"
+        android:paddingVertical="8dp" />
 
+    <!-- Gender -->
     <TextView
         android:id="@+id/lblGender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Gender"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+        android:text="@string/gender2"
+        android:textAppearance="?attr/textAppearanceBodyLarge"
+        android:textColor="?attr/colorOnSurface"
+        android:paddingVertical="8dp" />
 
+    <!-- Birthdate -->
     <TextView
         android:id="@+id/lblBirthdate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Birthdate"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+        android:text="@string/birthdate2"
+        android:textAppearance="?attr/textAppearanceBodyLarge"
+        android:textColor="?attr/colorOnSurface"
+        android:paddingVertical="8dp" />
 
+    <!-- State -->
     <TextView
         android:id="@+id/lblState"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="State"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+        android:text="@string/state2"
+        android:textAppearance="?attr/textAppearanceBodyLarge"
+        android:textColor="?attr/colorOnSurface"
+        android:paddingVertical="8dp" />
 
 </LinearLayout>

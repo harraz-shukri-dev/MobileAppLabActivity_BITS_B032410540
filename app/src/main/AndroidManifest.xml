@@ -28,6 +28,9 @@
         android:theme="@style/Theme.Lab"
         tools:targetApi="31">
         <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
             android:name=".SearchStudentActivity"
             android:exported="false" />
         <activity
@@ -37,10 +40,10 @@
             android:name=".StudentForm"
             android:exported="false" />
         <activity
-            android:name=".Expenses"
+            android:name=".ActivityExpense"
             android:exported="false" />
         <activity
-            android:name=".Login"
+            android:name=".ActivityDashBoard"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

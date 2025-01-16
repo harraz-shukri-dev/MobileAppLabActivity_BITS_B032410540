@@ -6,18 +6,16 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.MenuItem;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
-import com.utem.harrazshukri.lab.databinding.ActivityLoginBinding;
 import com.utem.harrazshukri.lab.databinding.ActivityRegisterBinding;
 
 import java.util.Calendar;
@@ -57,8 +55,8 @@ public class Register extends AppCompatActivity {
         EditText editTextPhone = findViewById(R.id.editTextPhone);
         EditText editTextDOB = findViewById(R.id.editTextDOB);
 
-        CheckBox checkBoxMale = findViewById(R.id.checkBoxMale);
-        CheckBox checkBoxFemale = findViewById(R.id.checkBoxFemale);
+        RadioButton radioMale = findViewById(R.id.radioMale);
+        RadioButton radioFemale = findViewById(R.id.radioFemale);
 
         Button buttonRegister = findViewById(R.id.buttonRegister);
 
@@ -74,21 +72,21 @@ public class Register extends AppCompatActivity {
         editTextDOB.setOnClickListener(v -> showDatePicker(editTextDOB));
 
         // Ensure only one gender checkbox is selected
-        checkBoxMale.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if (isChecked) checkBoxFemale.setChecked(false);
+        radioMale.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) radioFemale.setChecked(false);
         });
 
-        checkBoxFemale.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if (isChecked) checkBoxMale.setChecked(false);
+        radioFemale.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) radioMale.setChecked(false);
         });
 
         // Register Button Click Handler
         buttonRegister.setOnClickListener(v -> {
-            if (validateFields(editTextName, editTextPassword, editTextEmail, editTextPhone, editTextDOB, checkBoxMale, checkBoxFemale)) {
+            if (validateFields(editTextName, editTextPassword, editTextEmail, editTextPhone, editTextDOB, radioMale, radioFemale)) {
                 Toast.makeText(this, "Registration Successful!", Toast.LENGTH_SHORT).show();
 
-                // Navigate to the Expenses Activity
-                Intent intent = new Intent(Register.this, Expenses.class);
+
+                Intent intent = new Intent(Register.this, ActivityDashBoard.class);
                 startActivity(intent);
             }
         });
@@ -148,7 +146,7 @@ public class Register extends AppCompatActivity {
     }
 
     // Validation Method
-    private boolean validateFields(EditText name, EditText password, EditText email, EditText phone, EditText dob, CheckBox male, CheckBox female) {
+    private boolean validateFields(EditText name, EditText password, EditText email, EditText phone, EditText dob, RadioButton male, RadioButton female) {
         if (TextUtils.isEmpty(name.getText().toString())) {
             name.setError("Name is required");
             return false;

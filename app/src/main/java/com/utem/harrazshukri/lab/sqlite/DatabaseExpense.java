@@ -6,8 +6,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
-import com.utem.harrazshukri.lab.Expenses;
+import com.utem.harrazshukri.lab.Expense;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,17 +26,16 @@ public class DatabaseExpense extends SQLiteOpenHelper {
     public static final String colExpValue = "exp_value";
 
     public static final String colExpQty = "exp_qty";
-
     public static final String colExpTotal = "exp_total";
 
-    public static final String colExpDesc = "exp_desc";
 
-    public static final String colExpImg = "exp_image";
-
-    public static final String colExpType = "exp_type";
-
-
-    public static final String createTable = "CREATE TABLE " + tblExpense + "(" + colId + " INTEGER PRIMARY KEY AUTOINCREMENT, " + colExpName + " TEXT, " + colExpDate + " TEXT, " + colExpValue + " TEXT, " + colExpQty + " TEXT, " + colExpTotal + " TEXT, " + colExpDesc + " TEXT, " + colExpImg + " TEXT , " + colExpType + " TEXT)";
+    public static final String createTable = "CREATE TABLE " + tblExpense + "("
+            + colId + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+            + colExpName + " TEXT, "
+            + colExpDate + " TEXT, "
+            + colExpValue + " REAL, "
+            + colExpQty + " INTEGER, "
+            + colExpTotal + " TEXT)";
 
     public static final String dropTable = "DROP TABLE IF EXISTS " + tblExpense;
 
@@ -57,7 +55,7 @@ public class DatabaseExpense extends SQLiteOpenHelper {
     }
 
 
-    public int fnInsertExpense(Expenses expense) {
+    public int fnInsertExpense(Expense expense) {
         int resCode = 0;
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -67,7 +65,6 @@ public class DatabaseExpense extends SQLiteOpenHelper {
         values.put(colExpValue, expense.getExpValue());
         values.put(colExpQty, expense.getExpQty());
         values.put(colExpTotal, expense.getExpTotal());
-        values.put(colExpDesc, expense.getExpDesc());
 
         return (int) db.insert(tblExpense, null, values);
 
@@ -75,8 +72,8 @@ public class DatabaseExpense extends SQLiteOpenHelper {
 
     //Change 1
     @SuppressLint("Range")
-    public List<Expenses> fnGetAllExpense() {
-        List<Expenses> expenses = new ArrayList<Expenses>();
+    public List<Expense> fnGetAllExpense() {
+        List<Expense> expenses = new ArrayList<Expense>();
         String strSelect = "SELECT * FROM " + tblExpense;
         Cursor cursor = getReadableDatabase().rawQuery(strSelect, null);
         if (cursor.moveToFirst()) {
@@ -85,7 +82,8 @@ public class DatabaseExpense extends SQLiteOpenHelper {
                 String expDate = cursor.getString(cursor.getColumnIndex(colExpDate));
                 float expValue = cursor.getFloat(cursor.getColumnIndex(colExpValue));
                 int expQty = cursor.getInt(cursor.getColumnIndex(colExpQty));
-                Expenses expense = new Expenses(expName, expDate, expValue, expQty);
+                float expTotal = cursor.getFloat(cursor.getColumnIndex(colExpTotal));
+                Expense expense = new Expense(expName, expDate, expValue, expQty, expTotal);
                 expenses.add(expense);
             } while (cursor.moveToNext());
         }

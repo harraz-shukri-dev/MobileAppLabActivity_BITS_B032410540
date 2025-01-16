@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="?attr/colorSurface">
+
+    <!-- Expense Name -->
+    <TextView
+        android:id="@+id/txtExpName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="start"
+        android:text="@string/expense_name"
+        android:textAppearance="?attr/textAppearanceBodyMedium"
+        android:textColor="?attr/colorOnSurface"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp" />
+
+    <!-- Expense Date -->
+    <TextView
+        android:id="@+id/txtExpDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:text="@string/expense_date"
+        android:textAppearance="?attr/textAppearanceBodyMedium"
+        android:textColor="?attr/colorOnSurface"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp" />
+
+    <!-- Expense Value -->
+    <TextView
+        android:id="@+id/txtExpValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/expense_value"
+        android:textAppearance="?attr/textAppearanceBodyMedium"
+        android:textColor="?attr/colorOnSurface"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp" />
+
+    <!-- Expense Quantity -->
+    <TextView
+        android:id="@+id/txtExpQty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/expense_quantity"
+        android:textAppearance="?attr/textAppearanceBodyMedium"
+        android:textColor="?attr/colorOnSurface"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp" />
+
+    <!-- Expense Total -->
+    <TextView
+        android:id="@+id/txtExpTotal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/expense_total"
+        android:textAppearance="?attr/textAppearanceBodyMedium"
+        android:textColor="?attr/colorOnSurface"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp" />
+</LinearLayout>

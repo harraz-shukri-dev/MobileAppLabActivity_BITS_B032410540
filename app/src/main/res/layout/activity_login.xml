@@ -12,8 +12,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
+        android:orientation="vertical"
+        android:background="?attr/colorSurface">
 
         <!-- Scrollable Content -->
         <ScrollView
@@ -26,47 +26,64 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="24dp">
 
                 <TextView
                     android:id="@+id/welcomeTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/welcome_text"
+                    android:text="@string/btn_login"
                     android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                    android:textAlignment="center"
+                    android:layout_marginTop="24dp"
+                    android:textAppearance="?attr/textAppearanceHeadline5"
+                    android:textColor="?attr/colorOnSurface" />
 
-                <EditText
-                    android:id="@+id/editTextText"
+
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:autofillHints="username"
-                    android:hint="@string/user_name"
-                    android:inputType="text"
-                    android:imeOptions="actionNext"
                     android:layout_marginTop="16dp"
-                    android:padding="10dp" />
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="?attr/colorPrimary">
 
-                <EditText
-                    android:id="@+id/editTextTextPassword"
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/user_name"
+                        android:inputType="text"
+                        android:imeOptions="actionNext"
+                        android:autofillHints="username" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:autofillHints="password"
-                    android:hint="@string/user_pwd"
-                    android:inputType="textPassword"
-                    android:imeOptions="actionDone"
                     android:layout_marginTop="16dp"
-                    android:padding="10dp" />
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="?attr/colorPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextTextPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/user_pwd"
+                        android:inputType="textPassword"
+                        android:imeOptions="actionDone"
+                        android:autofillHints="password" />
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnLogin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="16dp"
                     android:text="@string/btn_login"
-                    android:layout_marginTop="20dp"
-                    app:cornerRadius="8dp"
-                    android:backgroundTint="@color/material_dynamic_primary40" />
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:cornerRadius="16dp" />
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
@@ -78,6 +95,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        app:menu="@menu/navigation_menu" />
-
+        app:menu="@menu/navigation_menu"
+        app:itemIconTint="?attr/colorOnSurfaceVariant"
+        app:itemTextColor="?attr/colorOnSurface" />
 </androidx.drawerlayout.widget.DrawerLayout>
